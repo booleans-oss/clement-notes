@@ -1,0 +1,250 @@
+---
+title: Amortization
+description: What is amortization?
+subject: Accounting
+---
+
+import { Callout } from "nextra-theme-docs";
+import Latex from "react-latex-next";
+
+## Amortization
+
+- Recognition of a decline in the value of an assets
+- **NON-CASH** expense in the income statement
+- calculated expense
+
+## Depreciable asset
+
+- tangible assets (except land, work of art, and historical artifacts)
+- intangible assets (patents, licenses, softwares)
+
+<Callout type="error" emoji="‼️">
+  **Financial assets = not depreciable**
+</Callout>
+
+## Authorization period
+
+**Period of use of the asset**
+
+- **Equipment**: between <span className="highlight">6</span> and <span className="highlight">10</span> years
+- **Transport equipment**: between <span className="highlight">4</span> and <span className="highlight">5</span> years
+- **Software & Hardware**: <span className="highlight">3</span> years
+
+## Amortization Schedule
+
+- Original Value (cost of the asset <span className="highlight red">excluding VAT</span>)
+- Amortization annuity (amount of the amortization expense each year)
+- Normal duration of use (number of years of use of the asset fixed by the fiscal authorities)
+- Amortization rate: <span className="highlight">100% / Normal duration of use</span>
+- Net Book Value: <span className="highlight">Original Value - Cumulative amortization annuities</span> = <span className="highlight red">annual depreciation</span>
+
+## Methods of amortization
+
+### Linear method
+
+<img
+  className="dark"
+  src="/accounting/amortization/linear-dark.png"
+  alt="Linear method Image"
+/>
+<img
+  className="light"
+  src="/accounting/amortization/linear-light.png"
+  alt="Linear method Image"
+/>
+
+### Degressive method
+
+- Decreasing annual amortization
+- Higher tax savings
+
+<img
+  className="dark"
+  src="/accounting/amortization/degressive-dark.png"
+  alt="Degressiev method Image"
+/>
+<img
+  className="light"
+  src="/accounting/amortization/degressive-light.png"
+  alt="Degressive method Image"
+/>
+
+## Example
+
+Purchase of a machine 25000€, duration of use 5 years
+
+- <span className="highlight">Case 1</span>: date = 1 January N{" "}
+- <span className="highlight">Case 2</span>: date = 12 August N{" "}
+
+### Linear method
+
+#### Case 1
+
+<Callout type="info">
+  **Annuity rate** = <Latex>$\frac\{100\\%\}\{\text\{Duration of use\}\}$</Latex><br/>
+  **Amortization annuity** = <Latex>$\text\{Annuity rate\} \times \text\{Original Value\}$</Latex> <br/>
+  **Net Book Value** = <Latex>$\text\{Original Value\} - \text\{Cumulated annuities\}$</Latex>
+</Callout>
+
+**Amortization rate**<Latex> = $\frac\{100\\%\}\{5\}=20\\%$</Latex><br/>
+**Amortization annuity**<Latex> = $20\\%\times25000€ = 5000€$</Latex>
+
+| Year | Depreciable base | Annuity | Cumulated annuities | Net Book Value |
+| ---- | ---------------- | ------- | ------------------- | -------------- |
+| N    | 25000            | 5000    | 5000                | 20000          |
+| N+1  | 20000            | 5000    | 10000               | 15000          |
+| N+2  | 15000            | 5000    | 15000               | 10000          |
+| N+3  | 10000            | 5000    | 20000               | 5000           |
+| N+4  | 5000             | 5000    | 25000               | 0              |
+
+#### Case 2
+
+<Callout type="info">
+  **Annuity rate** = <Latex>$\frac\{100\\%\}\{\text\{Duration of use\}\}$</Latex><br/>
+  **Amortization annuity** = <Latex>$\text\{Annuity rate\} \times \text\{Original Value\}$</Latex> <br/>
+  **Net Book Value** = <Latex>$\text\{Original Value\} - \text\{Cumulated annuities\}$</Latex><br/>
+  **Annuity for the first year** = <Latex>$\text\{Annuity rate\} \times \text\{Original Value\} \times \frac\{\text\{Number of used days\}\}\{360\}$</Latex>
+</Callout>
+
+**Amortization rate**<Latex> = $\frac\{100\\%\}\{5\}=20\\%$</Latex><br/>
+**Amortization annuity**<Latex> = $20\\%\times25000€ = 5000€$</Latex><br/>
+**Annuity for the first year**<Latex> = $20\\%\times25000€ \times \frac\{4\times30+(30-12)\}\{360\} = 1916,66€$</Latex>
+
+<img
+  className="dark"
+  src="/accounting/amortization/used-days-dark.png"
+  alt="Used days explanation Image"
+/>
+<img
+  className="light"
+  src="/accounting/amortization/used-days-light.png"
+  alt="Used days explanation Image"
+/>
+
+| Year                                                                  | Depreciable base | Annuity | Cumulated annuities | Net Book Value |
+| --------------------------------------------------------------------- | ---------------- | ------- | ------------------- | -------------- |
+| N                                                                     | 25000            | 1916,66 | 1916,66             | 23083,34       |
+| N+1                                                                   | 23083,34         | 5000    | 6916,66             | 18083,34       |
+| N+2                                                                   | 18083,34         | 5000    | 11916,66            | 13083,34       |
+| N+3                                                                   | 13083,34         | 5000    | 16916,66            | 8083,34        |
+| N+4                                                                   | 8083,34          | 5000    | 21916,66            | 3083,34        |
+| N+5 <br/><span className="highlight red">Complementary annuity</span> | 3083,34          | 3083,34 | 25000               | 0              |
+
+### Degressive method
+
+#### Case 1
+
+<Callout type="error" emoji="‼️">
+| Duration                                                                      | Original Coefficient |
+| ------------------------------------------------------------------------- | -------------- | 
+| Between <span className="highlight">3</span> and  <span className="highlight">4</span> years | 1.25          | 
+| Between  <span className="highlight">5</span> and  <span className="highlight">6</span> years  | 1.75         |
+| More than  <span className="highlight">6</span> years  | 2.25         |
+
+</Callout>
+
+<Callout type="info">
+  **Linear Annuity rate** = <Latex>$\frac\{100\\%\}\{\text\{Duration of use\}\} = R_L$</Latex>
+
+**Compared Linear Annuity rate** = <Latex>$\frac\{100\\%\}\{\text\{Remaining years\}\} = \frac\{100\\%\}\{\text\{N - \text\{Current year\}\}\} = R_\{CL\}$</Latex>
+
+**Degressive Annuity rate** = <Latex>$R_L \times \text\{Original Coefficient\} = \frac\{100\\%\}\{\text\{Duration of use\}\} \times \text\{Original Coefficient\}$</Latex>
+
+**Amortization annuity** = <Latex>$\text\{Annuity rate\} \times \text\{Original Value\}$</Latex>
+
+**Net Book Value** = <Latex>$\text\{Original Value\} - \text\{Cumulated annuities\}$</Latex>
+
+</Callout>
+
+**Linear Amortization rate**<Latex> = $\frac\{100\\%\}\{5\}=20\\%$</Latex><br/>
+
+**Degressive Annuity rate**<Latex> = $20\\%\times1.75 = 35\\%$</Latex><br/>
+
+| <Latex>$R\_\text\{CL\} \text\{vs\} R_D $</Latex>                    | Year | Depreciable base | Annuity | Cumulated annuities | Net Book Value |
+| ------------------------------------------------------------------- | ---- | ---------------- | ------- | ------------------- | -------------- |
+| 20%<Latex>$\<$</Latex><span className="highlight orange">35%</span> | N    | 25000            | 8759    | 8750                | 16250          |
+| 25%<Latex>$\<$</Latex><span className="highlight orange">35%</span> | N    | 16250            | 5687.5  | 14437.5             | 10562.5        |
+| 33%<Latex>$\<$</Latex><span className="highlight orange">35%</span> | N    | 10562.5          | 3696.87 | 18134.37            | 6865.62        |
+| <span className="highlight orange">50%</span><Latex>$\<$</Latex>35% | N    | 6865.62          | 3432.81 | 21567.18            | 3432.81        |
+| <span className="highlight orange">100%</span><Latex>$>$</Latex>35% | N    | 3432.81          | 3432.81 | 25000               | 0              |
+
+#### Case 2
+
+<Callout type="error" emoji="‼️">
+| Duration                                                                      | Original Coefficient |
+| ------------------------------------------------------------------------- | -------------- |
+| Between <span className="highlight">3</span> and  <span className="highlight">4</span> years | 1.25          |
+| Between  <span className="highlight">5</span> and  <span className="highlight">6</span> years  | 1.75         |
+| More than  <span className="highlight">6</span> years  | 2.25         |
+
+</Callout>
+
+<Callout type="info">
+  **Linear Annuity rate** = <Latex>$\frac\{100\\%\}\{\text\{Duration of use\}\} = R_L$</Latex>
+
+**Compared Linear Annuity rate** = <Latex>$\frac\{100\\%\}\{\text\{Remaining years\}\} = \frac\{100\\%\}\{\text\{N - \text\{Current year\}\}\} = R_\{CL\}$</Latex>
+
+**Degressive Annuity rate** = <Latex>$R_L \times \text\{Original Coefficient\} = \frac\{100\\%\}\{\text\{Duration of use\}\} \times \text\{Original Coefficient\}$</Latex>
+
+**Amortization annuity** = <Latex>$\text\{Annuity rate\} \times \text\{Original Value\}$</Latex>
+
+**Net Book Value** = <Latex>$\text\{Original Value\} - \text\{Cumulated annuities\}$</Latex>
+
+**Annuity for the first year** = <Latex>$\text\{Annuity rate\} \times \text\{Original Value\} \times \frac\{\text\{Number of used months\}\}\{360\}$</Latex>
+
+</Callout>
+
+**Linear Amortization rate**<Latex> = $\frac\{100\\%\}\{5\}=20\\%$</Latex><br/>
+
+**Degressive Annuity rate**<Latex> = $20\\%\times1.75 = 35\\%$</Latex><br/>
+
+**Annuity for the first year**<Latex> = $35\\%\times25000€ \times \frac\{4\times30+(30-12)\}\{360\} = 3354,16€$</Latex>
+
+| <Latex>$R\_\text\{CL\} \text\{vs\} R_D $</Latex>                    | Year | Depreciable base | Annuity | Cumulated annuities | Net Book Value |
+| ------------------------------------------------------------------- | ---- | ---------------- | ------- | ------------------- | -------------- |
+| 20%<Latex>$\<$</Latex><span className="highlight orange">35%</span> | N    | 25000            | 3354.16 | 3354.16             | 21645.84       |
+| 25%<Latex>$\<$</Latex><span className="highlight orange">35%</span> | N    | 21645.84         | 6023.44 | 9377.6              | 15668.24       |
+| 33%<Latex>$\<$</Latex><span className="highlight orange">35%</span> | N    | 15668.24         | 5255.47 | 14633.07            | 10412.77       |
+| <span className="highlight orange">50%</span><Latex>$\<$</Latex>35% | N    | 10412.77         | 5220.64 | 19853.71            | 5220.64        |
+| <span className="highlight orange">100%</span><Latex>$>$</Latex>35% | N    | 5220.64          | 5220.64 | 25000               | 0              |
+
+## Accounting Documents
+
+### Recording Book
+
+<img
+  className="dark"
+  src="/accounting/amortization/recording-book-dark.png"
+  alt="Recording book Image"
+/>
+<img
+  className="light"
+  src="/accounting/amortization/recording-book-light.png"
+  alt="Recording Book Image"
+/>
+
+### Income Statement
+
+<img
+  className="dark"
+  src="/accounting/amortization/income-statement-dark.png"
+  alt="Income Statement Image"
+/>
+<img
+  className="light"
+  src="/accounting/amortization/income-statement-light.png"
+  alt="Income Statement Image"
+/>
+
+### Balance Sheet
+
+<img
+  className="dark"
+  src="/accounting/amortization/balance-sheet-dark.png"
+  alt="Balance Sheet Image"
+/>
+<img
+  className="light"
+  src="/accounting/amortization/balance-sheet-light.png"
+  alt="Balance Sheet Image"
+/>

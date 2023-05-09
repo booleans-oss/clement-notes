@@ -1,0 +1,321 @@
+---
+title: Step-by-step
+description: Learn how to record your operations in your accounting book
+subject: Accounting
+---
+
+import { Callout } from "nextra-theme-docs";
+
+## Operations
+
+First, we need to understand the operations. Here are five examples of operation that we will use throughout the process.
+
+> **Operation 1** - 01/01/22, Purchase of a laptop, 10000$, 20% tax, by card, invoice n.1
+
+> **Operation 2** - 02/01/22, Selling my products, 100000$, 15% tax, customer will pay in 2 months, invoice n.2
+
+> **Operation 3** - 03/03/22, Payment of wages, 20000$, by bank transfer, transfer n.1
+
+> **Operation 4** - 06/03/22, Owner put its own money in the company's bank, 2000$, transfer n.2
+
+> **Operation 5** - 10/05/22, Cash withdrawal, 400$, withdrawal n.1
+
+### Understanding the operation
+
+import { Tab, Tabs } from "nextra-theme-docs";
+
+From the operation, we need to have the following informations mandatory for our recording book:
+
+- Date
+- Classes
+- Amounts
+- Proof document
+- Types (credit/debit)
+<Callout type="error" emoji="‼️">If VAT rate is provided, **amount DOES NOT INCLUDE VAT**</Callout>
+
+All these informations can be extracted from each operation:
+
+<Tabs items={['Operation 1', 'Operation 2', 'Operation 3', 'Operation 4', 'Operation 5']}>
+
+<Tab>
+  <img
+    className="dark"
+    src="/accounting/process/prompts/prompt-1-dark.png"
+    alt="Prompt 1 Image"
+  />
+  <img
+    className="light"
+    src="/accounting/process/prompts/prompt-1-light.png"
+    alt="Prompt 1 Image"
+  />
+</Tab>
+
+<Tab>
+  <img
+    className="dark"
+    src="/accounting/process/prompts/prompt-2-dark.png"
+    alt="Prompt 2 Image"
+  />
+  <img
+    className="light"
+    src="/accounting/process/prompts/prompt-2-light.png"
+    alt="Prompt 2 Image"
+  />
+</Tab>
+
+<Tab>
+  <img
+    className="dark"
+    src="/accounting/process/prompts/prompt-3-dark.png"
+    alt="Prompt 3 Image"
+  />
+  <img
+    className="light"
+    src="/accounting/process/prompts/prompt-3-light.png"
+    alt="Prompt 3 Image"
+  />
+</Tab>
+
+<Tab>
+  <img
+    className="dark"
+    src="/accounting/process/prompts/prompt-4-dark.png"
+    alt="Prompt 4 Image"
+  />
+  <img
+    className="light"
+    src="/accounting/process/prompts/prompt-4-light.png"
+    alt="Prompt 4 Image"
+  />
+</Tab>
+
+<Tab>
+  <img
+    className="dark"
+    src="/accounting/process/prompts/prompt-5-dark.png"
+    alt="Prompt 5 Image"
+  />
+  <img
+    className="light"
+    src="/accounting/process/prompts/prompt-5-light.png"
+    alt="Prompt 5 Image"
+  />
+</Tab>
+
+</Tabs>
+
+### Identifying classes
+
+Now that we know which parts of the operation can help us identify the classes, we can try and find the closest account number that fits our operation.
+
+<Tabs items={['Operation 1', 'Operation 2', 'Operation 3', 'Operation 4', 'Operation 5']}>
+<Tab>
+
+**First Class Text** = "_Purchase of Laptop_".
+
+- Latop = fixed asset ∴ <span className="highlight red">Class 2</span>
+- Latop = industrial machinery ∴ <span className="highlight">**Account 2154**</span>
+- VAT on fixed asset ∴ <span className="highlight">**Account 44562**</span>
+
+**Second Class Text** = "_By card_"
+
+- Payment = Financial account ∴ <span className="highlight orange">Class 5</span>
+- Card = Bank account ∴ <span className="highlight">**Account 512**</span>
+
+</Tab>
+
+<Tab>
+
+**First Class Text** = "_Selling my products_"
+
+- Sales of goods = Income ∴ <span className="highlight blue">Class 7</span>
+- Products = finished goods ∴ <span className="highlight">**Account 701**</span>
+- VAT on sales of products ∴ <span className="highlight">**Account 44571**</span>
+
+**Second Class Text** = "_Customer will pay in 2 months_"
+
+- Customer = third-party entity ∴ <span className="highlight violet">Class 4</span>
+- Customer = receivables ∴ <span className="highlight">**Account 4111**</span>
+
+</Tab>
+
+<Tab>
+**First Class Text** = "_Payment of wages_"
+
+- Wages = expenses ∴ <span className="highlight pink">Class 6</span>
+- Wages = operational expenses ∴ <span className="highlight">**Account 6411**</span>
+
+**Second Class Text** = "_By bank transfer_"
+
+- Payment = Financial account ∴ <span className="highlight orange">Class 5</span>
+- Transfer = Bank account ∴ <span className="highlight">**Account 512**</span>
+
+</Tab>
+
+<Tab>
+**First Class Text** = "_Investment by a friend_"
+
+- Investment = capital ∴ <span className="highlight pink">Class 1</span>
+- Investment = owner's capital ∴ <span className="highlight">**Account 108**</span>
+
+**Second CLass Text** = "_Transfer_"
+
+- Payment = Financial account ∴ <span className="highlight orange">Class 5</span>
+- Transfer = Bank account ∴ <span className="highlight">**Account 512**</span>
+
+</Tab>
+<Tab>
+**First Class Text** = "_Cash_"
+
+- Payment = Financial account ∴ <span className="highlight orange">Class 5</span>
+- Cash = Cash in hand ∴ <span className="highlight">**Account 53**</span>
+
+**Second Class Text** = "_Withdrawal_"
+
+- Payment = Financial account ∴ <span className="highlight orange">Class 5</span>
+- Withdrawal = Bank ∴ <span className="highlight">**Account 512**</span>
+</Tab>
+</Tabs>
+
+### Identifying the types
+
+With all the account numbers and names figured out, we now have to decide if a specific account is debit or credit.
+To do so, we use the rule:
+
+<img
+  className="dark"
+  src="/accounting/process/debit-credit-dark.png"
+  alt="Debit-Credit Rules Image"
+/>
+<img
+  className="light"
+  src="/accounting/process/debit-credit-light.png"
+  alt="Debit-Credit Rukes Image"
+/>
+
+## Recording Book
+
+With all the information we got from the operation analysis, we can fill in our operation in our recording books.
+The most important rule is to always start with <span className="highlight red">**THE DEBIT ACCOUNT**</span>.
+
+<img
+  className="dark"
+  src="/accounting/process/recording-book-dark.png"
+  alt="Recording Book Image"
+/>
+<img
+  className="light"
+  src="/accounting/process/recording-book-light.png"
+  alt="Recording Book Image"
+/>
+
+We can clearly see that totals for debit and credit are the same, which means that we **CORRECTLY** entered all our operation.
+
+## Ledger Book
+
+Since now we have all the information for all operations, we can classify our balances in terms of accounts. For the Ledger book, we:
+
+- Separate each account
+- Separate debit and credit
+- Calculate the difference to find the balance
+  - ON THE LEFT SIDE: "C.B." : if credit is larger than debit (credit > debit)
+  - ON THE RIGHT SIDE: "D.B." : if debit is larger than debit (credit < debit)
+
+<details>
+<summary>Step by step</summary>
+<img className="dark" src="/accounting/process/ledger-book-1-dark.png" alt="Ledger Book 1 Image"/>
+<img className="light" src="/accounting/process/ledger-book-1-light.png" alt="Ledger Book 1 Image"/>
+
+<img
+  className="dark"
+  src="/accounting/process/ledger-book-2-dark.png"
+  alt="Ledger Book 2 Image"
+/>
+<img
+  className="light"
+  src="/accounting/process/ledger-book-2-light.png"
+  alt="Ledger Book 2 Image"
+/>
+
+<img
+  className="dark"
+  src="/accounting/process/ledger-book-3-dark.png"
+  alt="Ledger Book 3 Image"
+/>
+<img
+  className="light"
+  src="/accounting/process/ledger-book-3-light.png"
+  alt="Ledger Book 3 Image"
+/>
+
+<img
+  className="dark"
+  src="/accounting/process/ledger-book-4-dark.png"
+  alt="Ledger Book 4 Image"
+/>
+<img
+  className="light"
+  src="/accounting/process/ledger-book-4-light.png"
+  alt="Ledger Book 4 Image"
+/>
+
+<img
+  className="dark"
+  src="/accounting/process/ledger-book-5-dark.png"
+  alt="Ledger Book 5 Image"
+/>
+<img
+  className="light"
+  src="/accounting/process/ledger-book-5-light.png"
+  alt="Ledger Book 5 Image"
+/>
+
+<img
+  className="dark"
+  src="/accounting/process/ledger-book-6-dark.png"
+  alt="Ledger Book 6 Image"
+/>
+<img
+  className="light"
+  src="/accounting/process/ledger-book-6-light.png"
+  alt="Ledger Book 6 Image"
+/>
+
+<img
+  className="dark"
+  src="/accounting/process/ledger-book-7-dark.png"
+  alt="Ledger Book 7 Image"
+/>
+<img
+  className="light"
+  src="/accounting/process/ledger-book-7-light.png"
+  alt="Ledger Book 7 Image"
+/>
+
+<img
+  className="dark"
+  src="/accounting/process/ledger-book-8-dark.png"
+  alt="Ledger Book 8 Image"
+/>
+<img
+  className="light"
+  src="/accounting/process/ledger-book-8-light.png"
+  alt="Ledger Book 8 Image"
+/>
+
+<img className="dark" src="/accounting/process/ledger-book-9-dark.png" alt="Ledger Book 9 Image"/>
+<img className="light" src="/accounting/process/ledger-book-9-light.png" alt="Ledger Book 9 Image"/>
+</details>
+
+### Final Ledger Book
+
+<img
+  className="dark"
+  src="/accounting/process/ledger-book-dark.png"
+  alt="Ledger Book Image"
+/>
+<img
+  className="light"
+  src="/accounting/process/ledger-book-light.png"
+  alt="Ledger Book Image"
+/>

@@ -1,0 +1,420 @@
+---
+title: Inventory
+description: Inventory Work
+subject: Accounting
+---
+
+import { Callout, Steps } from "nextra-theme-docs";
+import Latex from "react-latex-next";
+
+## Introduction
+
+<Callout type="info">
+  **<u>Article 12</u>** of Commercial Code:
+  <blockquote>
+    &ensp;**Goods Aquired** =
+    <span className="highlight red">purchase cost</span> +
+    <span className="highlight green">incidental purchase cost</span>
+    (commission)
+
+    &ensp;**Goods Produced** =
+    <span className="highlight violet">production cost</span>
+
+  </blockquote>
+</Callout>
+<br/>
+<blockquote>
+  When quantities were acquired in different periods, we have two ways to determine price of the output:<br/>
+   &ensp;&ensp;&ensp;&ensp;- <span class="highlight orange">Average</span> <br />
+   &ensp;&ensp;&ensp;&ensp;- <span class="highlight blue">Oldest Acquisition Price</span> (First in First Out - <span class="highlight">FIFO</span>) <br />
+</blockquote>
+<br/>
+<center>
+<img
+  className="dark"
+  src="/accounting/inventory/inventory-class-dark.png"
+  alt="Inventory Class Explanation Image"
+/>
+<img
+  className="light"
+  src="/accounting/inventory/inventory-class-light.png"
+  alt="Inventory Class Explanation Image"
+/>
+</center>
+
+## Average
+
+<Callout type="error" emoji="‼️">
+  THIS METHOD SHOULD BE USED AT THE END OF THE YEAR
+</Callout>
+
+<Steps>
+### Weighted cost
+
+The first step is to calculate the weighted cost of all input/acquisition goods.
+
+<Callout type="info">
+    <Latex>$\text\{Weighted Cost\} = \text\{Quantity\} \times \text\{Unit Cost\}$</Latex>
+</Callout>
+
+### Sum of weighted cost
+
+Add all weighted cost.
+
+### Total Input Quantity
+
+Calculate the quantity of all inputs goods by adding all quantites of input/acquisition.
+
+### Weighted Average
+
+Calculate the weighted average cost.
+
+<Callout type="info">
+   <Latex>$\text\{Average\} = \frac\{\text\{Sum of weighted cost\}\}\{\text\{Total Quantity\}\}$</Latex>
+</Callout>
+
+### Consumption
+
+Find the consumption cost.
+
+<Callout type="info">
+   <Latex>$\text\{Consumption Cost\} = \text\{Quantity Consumed\} \times \text\{Weighted Average\}$</Latex>
+</Callout>
+
+### Final Stock Value
+
+Determine the final stock value
+
+<Callout type="info">
+    <Latex>$\text\{Final Stock Value\} = (\text\{Total Quantity\} - \text\{Consumed quantity\}) \times \text\{Weighted Average\}$</Latex>
+</Callout>
+
+</Steps>
+
+## FIFO
+
+<Callout type="error" emoji="‼️">
+  THIS METHOD SHOULD BE USED FOR EACH EXIT TRANSACTION
+</Callout>
+
+<Steps>
+
+### Inputs Used
+
+The first step is to determine which and how many input goods are consumed.
+
+### Weighted cost
+
+Calculate the weighted cost of consumed goods
+
+<Callout type="info">
+    <Latex>$\text\{Weighted Cost\} = \text\{Quantity\} \times \text\{Unit Cost\}$</Latex>
+</Callout>
+
+### Consumption
+
+Add all the weighted cost of consumed goods
+
+### Final Stock Value
+
+The final stock value is the sum of weighted unit cost of the remaining (not used) goods.
+
+</Steps>
+
+## Example 1
+
+| Date      | Movement    | Quantities | Unit of cost of acquisition |
+| --------- | ----------- | ---------- | --------------------------- |
+| January   | Purchase    | 200        | 0,40                        |
+| February  | Purchase    | 1000       | 0.36                        |
+| June      | Purchase    | 750        | 0,33                        |
+| August    | Purchase    | 600        | 0,38                        |
+| September | Purchase    | 400        | 0,36                        |
+| November  | Consumption | 2500       | ???                         |
+
+<Callout type="error" emoji="‼️">
+  Purchase = input
+
+Consumption = output
+
+</Callout>
+
+### Average
+
+#### Step 1: Weighted Cost
+
+<img
+  className="dark"
+  src="/accounting/inventory/average-1-dark.png"
+  alt="Average Method Example 1 Image"
+/>
+<img
+  className="light"
+  src="/accounting/inventory/average-1-light.png"
+  alt="Average Method Example 1 Image"
+/>
+
+Weighted cost are calculated in the specific column.<br/>
+
+<Callout emoji="➕" type="info">
+  <Latex>$200 \times 0,40€ = 80€$</Latex>
+  <br />
+  <Latex>$1000 \times 0,36€ = 360€$</Latex>
+  <br />
+  <Latex>$750 \times 0,33€ = 247,5€$</Latex>
+  <br />
+  <Latex>$600 \times 0,38€ = 228€$</Latex>
+  <br />
+  <Latex>$400 \times 0,36€ = 144€$</Latex>
+  <br />
+</Callout>
+#### Step 2: Sum of Weighted Cost
+
+We add all weighted cost. <br/>
+
+<Callout emoji="➕" type="info">
+    <Latex>$\text\{Sum\} = 80€ + 360€ + 247,5€ + 228€ + 144€ = 1059,5€$</Latex><br/>
+</Callout>
+
+#### Step 3: Total Quantity
+
+We calculate the total acquired/input goods.<br/>
+
+<Callout emoji="➕" type="info">
+    <Latex>$\text\{Total Quantity\} = 200 + 1000 + 750 + 600 + 400 = 2950$</Latex><br/>
+</Callout>
+
+#### Step 4: Average Weighted Cost
+
+We find the average with the average formula<br/>
+
+<Callout emoji="➕" type="info">
+    <Latex>$\text\{Average\} = \frac\{\text\{Sum of weighted cost\}\}\{\text\{Total Quantity\}\} = \frac\{\text\{1059,5\}\}\{\text\{2950\}\} = 0,359€ = 0,36€$</Latex>
+</Callout>
+
+#### Step 5: Consumption
+
+Now that we have average weighted unit price, we can find the consumption.<br/>
+
+<Callout emoji="➕" type="info">
+    <Latex>$\text\{Consumption Cost\} = \text\{Quantity Consumed\} \times \text\{Weighted Average\} = 2500 \times 0,36€ = 900€$</Latex>
+</Callout>
+
+#### Step 6: Final Stock Value
+
+The final stock value can thus be calculated:<br/>
+
+<Callout emoji="➕" type="info">
+ <Latex>$\text\{Final Stock Value\} \\\\ = (\text\{Total Quantity\} - \text\{Consumed quantity\}) \times \text\{Weighted Average\} \\\\ = (2950 - 2500) \times 0,36€ \\\\= 162€$</Latex>
+ </Callout>
+
+### FIFO
+
+#### Step 1: Inputs used
+
+<img
+  className="dark"
+  src="/accounting/inventory/fifo-1-dark.png"
+  alt="First in First Out Example 1 Image"
+/>
+<img
+  className="light"
+  src="/accounting/inventory/fifo-1-light.png"
+  alt="First in First Out Example 1 Image"
+/>
+
+From the table we can see that we use everything from January, everything from February, everything from June and 550 from August.
+
+#### Step 2: Weighted Cost
+
+We calculate the weighted cost for the used goods.
+
+<Callout emoji="➕" type="info">
+  <Latex>$200 \times 0,40€ = 80€$</Latex>
+  <br />
+  <Latex>$1000 \times 0,36€ = 360€$</Latex>
+  <br />
+  <Latex>$750 \times 0,33€ = 247,5€$</Latex>
+  <br />
+  <Latex>$550 \times 0,38€ = 209€$</Latex>
+  <br />
+</Callout>
+
+#### Step 3: Consumption
+
+We, then, add all the weighted cost to have the consumption cost:
+
+<Callout emoji="➕" type="info">
+    <Latex>$\text\{Consumption\} = 80€ + 360€ + 247,5€ + 209€ = 896,5€$</Latex><br/>
+</Callout>
+
+#### Step 4: Final Stock Value
+
+The remaining goods are:
+
+<img
+  className="dark"
+  src="/accounting/inventory/fifo-1-1-dark.png"
+  alt="First in First Out Example 1 Remaining Image"
+/>
+<img
+  className="light"
+  src="/accounting/inventory/fifo-1-1-light.png"
+  alt="First in First Out Example 1 Remaining Image"
+/>
+
+Weighted costs of remaining stock:
+
+<Callout emoji="➕" type="info">
+  <Latex>$50 \times 0,38€ = 19€$</Latex>
+  <br />
+  <Latex>$400 \times 0,36€ = 144€$</Latex>
+  <br />
+</Callout>
+
+We add them up:
+
+<Callout emoji="➕" type="info">
+ <Latex>$\text\{Final Stock Value\} = 19€ + 144€ = 163€$</Latex>
+</Callout>
+
+### Comparison
+
+<blockquote>
+  &ensp;&ensp;&ensp;&ensp;- <span class="highlight orange">**Average**</span><br/>
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;- **Consumption**: 900€<br/>
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;- **Final Stock Value**:162€<br/>
+  &ensp;&ensp;&ensp;&ensp;- <span class="highlight blue">**FIFO**</span><br/>
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;- **Consumption**: 856,5€ <br/>
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;- **Final Stock Value**:
+  163€
+</blockquote>
+
+## Example 2
+
+| Date         | Description          | Quantity | Unit Price |
+| :----------- | :------------------- | :------- | :--------- |
+| 1 September  | Initial stock        | 50       | 1,800€     |
+| 5 September  | Exit voucher n.S451  | 30       | ???        |
+| 7 September  | Entry voucher n.E920 | 140      | 1,950€     |
+| 8 September  | Exit voucher n.S452  | 40       | ???        |
+| 15 September | Exit voucher n.S453  | 54       | ???        |
+| 17 September | Entry voucher n.E921 | 32       | 1,860€     |
+| 21 September | Entry voucher n.E922 | 48       | 1,435€     |
+| 26 September | Exit voucher n.S454  | 120      | ???        |
+
+### Average
+
+#### Step 1: Weighted Cost
+
+We calculate the weighted cost for all acquired goods (all entry vouchers). 
+
+<Callout emoji="➕" type="info">
+<Latex>$50 \times 1,800€ = 90€$</Latex>
+<br />
+<Latex>$140 \times 1,950€ = 273,000€$</Latex>
+<br />
+<Latex>$32 \times 1,860€ = 59,520€$</Latex>
+<br />
+<Latex>$48 \times 1,435€ = 68,880€$</Latex>
+
+</Callout>
+
+#### Step 2: Sum of Weighted Cost
+
+We add all the weighted cost to have the sum of weighted cost.
+
+<Callout emoji="➕" type="info">
+<Latex>$\text\{Sum of Weighted Cost\} = 90€ + 273,000€ + 59,520€ + 68,880€ = 491,400€$</Latex>
+</Callout>
+
+#### Step 3: Total Quantity
+
+We add all the acquired quantities to have the total quantity.
+
+<Callout emoji="➕" type="info">
+<Latex>$\text\{Total Quantity\} = 50 + 140 + 32 + 48 = 270$</Latex>
+</Callout>
+
+#### Step 4: Average Weighted Cost 
+
+We divide the sum of weighted cost by the total quantity to have the average weighted cost.
+
+<Callout emoji="➕" type="info">
+<Latex>$\text\{Average Weighted Cost\} = \frac\{491,400\}\{270\} = 1,820€$</Latex>
+</Callout>
+
+#### Step 5: Consumption
+
+We calculate the consumption cost.
+
+Total quality consumed is the sum of all exit quantities.
+
+<Callout emoji="➕" type="info">
+<Latex>$\text\{Quantity consumed\} = 30 + 40 + 54 + 120 = 244$</Latex>
+<br/>
+<Latex>$\text\{Consumption\} = 244 \times 1,820€ = 444,680€$</Latex>
+</Callout>
+
+#### Step 6: Final Stock Value
+
+We calculate the final stock value.
+
+<Callout emoji="➕" type="info">
+<Latex>$\text\{Remaining quantity\} = 270 - 244 = 26$</Latex>
+<br/>
+<Latex>$\text\{Final Stock Value\} = 26 \times 1,820€ = 47,320€$</Latex>
+</Callout>
+
+
+<img
+  className="dark"
+  src="/accounting/inventory/average-2-dark.png"
+  alt="Average Example 2 Image"
+/>
+<img
+  className="light"
+  src="/accounting/inventory/average-2-light.png"
+  alt="Average Example 2 Image"
+/>
+
+### FIFO
+
+<img
+  className="dark"
+  src="/accounting/inventory/fifo-2-dark.png"
+  alt="First in First Out Example 2 Image"
+/>
+<img
+  className="light"
+  src="/accounting/inventory/fifo-2-light.png"
+  alt="First in First Out Example 2 Image"
+/>
+
+#### Step 1: Consumption
+
+We calculate the consumption cost.
+
+<Callout emoji="➕" type="info">
+<Latex>$\text\{Consumption\}\\\\ = 54,000€ + 36,000€ + 39,000€ + 105,300€ + 128,700€ + 59,520€ + 31,570€ \\\\ = 454,090€$</Latex>
+</Callout>
+
+#### Step 2: Final Stock Value
+
+We calculate the final stock value.
+
+<Callout emoji="➕" type="info">
+<Latex>$\text\{Final Stock Value\}\\\\ = 26 \times 1,435€ = 37,310€ $</Latex>
+</Callout>
+
+### Comparison
+
+<blockquote>
+  &ensp;&ensp;&ensp;&ensp;- <span class="highlight orange">**Average**</span><br/>
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;- **Consumption**: 444,680€<br/>
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;- **Final Stock Value**:47,320€<br/>
+  &ensp;&ensp;&ensp;&ensp;- <span class="highlight blue">**FIFO**</span><br/>
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;- **Consumption**: 454,090€ <br/>
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;- **Final Stock Value**:
+  37,310€
+</blockquote>

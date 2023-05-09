@@ -1,0 +1,137 @@
+---
+title: Lesson 2
+description: Lesson 2
+subject: Finance
+---
+
+
+import { Callout } from "nextra-theme-docs";
+
+## Opportunity Cost of Capital
+
+<Callout type="info">Opportunity Cost is the expected rate of return offered by alternative, equivalent (in time and risk) investments in financial markets.</Callout>
+<img className="dark" src="/finance/lesson-2/opportunity-cost-dark.png" alt="Opportunity Cost Image"/>
+<img className="light" src="/finance/lesson-2/opportunity-cost-light.png" alt="Opportunity Cost Image"/>
+
+## Interests
+
+### Simple Interest
+
+<img
+  className="dark"
+  src="/finance/lesson-2/simple-interest-dark.png"
+  alt="Simple Interest Image"
+/>
+<img
+  className="light"
+  src="/finance/lesson-2/simple-interest-light.png"
+  alt="Simple Interest Image"
+/>
+
+Student borrows €100 for five years at 5% per year simple interest.
+
+Initial debt = €100
+
+```ts filename="Simple Interest"
+Year 0 = €100
+Year 1 = Year 0 + (5% x €100) = €100 + €5 = €105
+Year 2 = Year 1 + (5% x €100) = 105 + €5 = €110
+Year 3 = Year 2 + (5% x €100) = 110 + €5 = €115
+Year 4 = Year 3 + (5% x €100) = 115 + €5 = €120
+Year 5 = Year 4 + (5% x €100) = 120 + €5 = €125
+```
+
+Final debt = €100 + (5 x 5) = €125
+
+For simple interest, only the two following formulas are useful:
+
+```ts filename="Recap"
+Debt at a specific year = Debt(Year - 1) + (Interest x Initial Debt)
+Total debt = Initial debt + (N. of years x Interest)
+```
+
+### Compound Interest
+
+<img
+  className="dark"
+  src="/finance/lesson-2/compound-interest-dark.png"
+  alt="Compound Interest Image"
+/>
+<img
+  className="light"
+  src="/finance/lesson-2/compound-interest-light.png"
+  alt="Compound Interest Image"
+/>
+
+Student borrows €100 for five years at 5% per year simple interest.
+
+Initial debt = €100
+
+```ts filename="Compound Interest"
+Year 0 = €100
+Year 1 = Year 0 + (5% x €100) = €100 + €5 = €105
+Year 2 = Year 1 + (5% x Year 1) = 105 + €5.25 = €110.25
+Year 3 = Year 2 + (5% x €Year 2) = 110.25 + €5.26 = €115.51
+Year 4 = Year 3 + (5% x Year 3) = 115.51 + €5.263 = €120.773
+Year 5 = Year 4 + (5% x Year 4) = 120.773 + €5.2632 = €126.04
+```
+
+Final debt = €126.04
+
+## The time value of money
+
+€1 now is worth more than €1 in a years time.
+
+## Asset Value
+
+An Asset is the sum of its Cash-Flows.
+
+Each asset is defined by its cash flow (CF) stream
+
+<img
+  className="dark"
+  src="/finance/lesson-2/asset-cashflow-dark.png"
+  alt="Asset Cash flow Image"
+/>
+<img
+  className="light"
+  src="/finance/lesson-2/asset-cashflow-light.png"
+  alt="Asset Cash flow Image"
+/>
+
+- Value of an asset = present value of its cash flows
+- Value of a firm = total value of its assets
+
+### Important characteristics of a cash flow
+
+**1. Time**
+
+<Callout>€100 today vs. €100 next year</Callout>
+
+In general, the further in the future a payoff, the smaller its present value.
+
+**2. Risk**
+
+<Callout> €100 with certainty vs. €200 or €0 with equal odds.</Callout>
+
+In general, people are risk-averse attribute lower value to uncertain outcomes.
+
+## Valuation of an investment
+
+When making profit, manager can:
+
+- Re-invest: opportunity cost for shareholders
+- Paying out shareholders (dividend)
+
+<Callout type="info">
+  Project Present Value (PV) = discounting its future cash flows by its
+  appropriate cost of capital
+</Callout>
+
+## Summary
+
+- (1) An asset = **_cash flow stream_**, whose value is driven by <span className="highlight">timing</span> and <span className="highlight">risk</span>.
+- (2) Evaluating a business = valuation of its assets.
+- (3) Perfect and complete capital markets create consensus among shareholders as consumption and investment decisions can be separated. This is because it allows shareholders to allocate wealth over time as they like.
+- (4) **_Shareholder value maximisation_** (increasing number of shareholders) = objective of the financial manager.
+- (5) **_Present value (PV)_**: Value of a cash flow is its expected value discounted at the opportunity cost of capital, which adjusts for both time and risk.
