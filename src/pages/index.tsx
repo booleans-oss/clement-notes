@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <main className="relative flex min-h-screen flex-col">
         <Image
           src={bgGradient}
-          className="fixed bottom-0 -z-10 h-screen"
+          className="fixed bottom-0 -z-10 h-screen w-screen"
           loading="lazy"
           alt="Purple and Blue gradient"
         />
@@ -110,7 +110,7 @@ const HeroSection = () => {
       <div className="flex flex-col items-center justify-center gap-10 bg-sky-50 py-20">
         <h1
           className={classNames(
-            "whitespace-pre-line text-center text-7xl font-bold tracking-tighter",
+            "whitespace-pre-line text-center text-5xl sm:text-7xl font-bold tracking-tighter",
             heading.className
           )}
         >
@@ -139,7 +139,7 @@ const HeroSection = () => {
             students
           </span>
         </h1>
-        <p className="w-2/3 whitespace-pre text-center text-xl font-normal text-gray-700">
+        <p className="w-full sm:w-2/3 whitespace-pre-line text-center text-xl sm:text-xl font-normal text-gray-700">
           With these hand-written and understable notes, you&apos;ll be able to{" "}
           {"\n"}
           ace your exams and get ahead with ease.
@@ -187,7 +187,7 @@ const HeroSection = () => {
           <h3 className="text-md w-fit rounded-full bg-zinc-700 px-4 py-1 font-normal text-zinc-400">
             01. Choose
           </h3>
-          <h1 className="whitespace-pre text-center text-5xl font-medium text-white">
+          <h1 className="whitespace-pre text-center text-xl sm:text-5xl font-medium text-white">
             <span
               style={{
                 textShadow:
@@ -208,7 +208,7 @@ const HeroSection = () => {
           <h3 className="text-md w-fit rounded-full bg-gray-200 px-4 py-1 font-normal text-zinc-400">
             02. Find
           </h3>
-          <h1 className="whitespace-pre text-center text-5xl font-medium text-black">
+          <h1 className="whitespace-pre text-center text-xl sm:text-5xl font-medium text-black">
             Find the{" "}
             <span style={{ textShadow: "-24px -18px 70px #ffd29b" }}>
               lesson
@@ -230,7 +230,7 @@ const HeroSection = () => {
           <h1
             className={classNames(
               heading.className,
-              "whitespace-pre text-center text-5xl font-medium text-white"
+              "whitespace-pre text-center text-xl sm:text-5xl font-medium text-white"
             )}
           >
             Explore the{" "}
@@ -246,11 +246,11 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <div className="relative flex h-[calc(100vh_-_360px)] w-full flex-col items-center justify-center gap-40 bg-sky-50 pt-40">
-        <div className="absolute flex flex-col items-center justify-center gap-40">
+      <div className="relative flex h-full w-full flex-col items-center justify-center gap-40 bg-sky-50 py-20 sm:py-40">
+        <div className="flex flex-col items-center justify-center gap-10 sm:gap-20">
           <h1
             className={classNames(
-              "whitespace-pre-line text-center text-6xl font-bold tracking-tighter",
+              "whitespace-pre-line text-center text-4xl sm:text-6xl font-bold tracking-tighter",
               heading.className
             )}
           >
@@ -279,7 +279,7 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <div className="flex w-1/2 flex-row flex-wrap items-center justify-center gap-10">
+          <div className="flex w-full px-4 sm:w-1/2 flex-row flex-wrap items-center justify-center gap-10">
             <div className="flex flex-col items-center gap-10 rounded-lg bg-blue-100 px-8 py-8">
               <div className="flex flex-col items-center gap-5">
                 <p className="text-2xl font-medium text-gray-700">
@@ -339,7 +339,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="flex h-screen w-full flex-col items-center gap-20 bg-transparent py-80">
+      <div className="flex h-screen w-full flex-col items-center gap10 sm:gap-20 bg-transparent py-40 sm:py-80">
         <div className="flex flex-col items-center gap-10">
           <h1
             className={classNames(
@@ -352,7 +352,7 @@ const HeroSection = () => {
             <span style={{ textShadow: "16px -11px 60px #e54cad" }}>help</span>{" "}
             you...
           </h1>
-          <div className="flex flex-row flex-wrap items-center justify-center gap-x-4 gap-y-4 w-2/3">
+          <div className="flex flex-row flex-wrap items-center justify-center gap-x-4 gap-y-4 w-full sm:w-2/3 px-4">
             <div className="flex max-w-lg flex-col items-start gap-8 rounded-lg border border-white/10 bg-gray-700/20 px-8 py-8 text-gray-400 backdrop-blur-md">
               <div className="flex items-center justify-center rounded-xl bg-[linear-gradient(rgba(255,255,255,.1),rgba(255,255,255,.06))] p-3 text-white">
                 <ClockIcon className="h-5 w-5" />
@@ -407,18 +407,18 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-full px-40 py-20">
-          <div className="relative flex w-full flex-col items-center gap-10 rounded-xl overflow-hidden backdrop-blur-sm py-40">
+        <div className="w-full px-4 sm:px-40 py-10 sm:py-20">
+          <div className="relative flex w-full flex-col items-center gap-5 sm:gap-10 rounded-xl overflow-hidden backdrop-blur-sm py-10 sm:py-40">
             <Image
               src={HeroGradient}
               className="absolute bottom-0 -z-10"
               alt="Hero Gradient"
             />
-            <h1 className="whitespace-pre text-center text-5xl font-medium text-white">
+            <h1 className="whitespace-pre text-center text-xl sm:text-5xl font-medium text-white">
               Note-taking but
               {"\n"} <span className="text-gray-600">done correctly </span>
             </h1>
-            <button className="rounded-full bg-white px-8 py-4 text-lg font-normal text-black transition-all hover:shadow-xl">
+            <button className="rounded-full bg-white px-4 sm:px-8 py-2 sm:py-4 text-md sm:text-lg font-normal text-black transition-all hover:shadow-xl">
               Get Started
             </button>
           </div>
