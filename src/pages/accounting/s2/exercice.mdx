@@ -1,0 +1,176 @@
+---
+title: Exercices 
+description: Exercices of accounting
+subject: Accounting
+---
+
+import { Callout, Steps } from 'nextra-theme-docs'
+import Latex from "react-latex-next";
+
+## Exercice 1
+
+<Callout type="info">
+    The Company LDS purchased office furniture on <span className="highlight">18 June</span> of year "N" for <span className="highlight">€7200</span> including
+    tax, the VAT rate is <span className="highlight">20%</span>. The company uses <span className="highlight">linear amortization</span>. The useful life of the asset is
+    <span className="highlight">five years</span>. The financial year-end is the end of December.
+</Callout>
+<br/>
+
+<Steps>
+
+### Step 1: Price Before Tax
+
+<Callout type="info">
+    Price Excluding Taxes = <Latex>$\frac\{\text\{Price Including Taxes\}\}\{1+\text\{VAT Rate\}\}$</Latex>
+</Callout>
+
+**Price Including Taxes** = €7200
+
+**VAT Rate** = 20%
+
+**Price Excluding Taxes** = <Latex>$\frac\{€7200\}\{1+20\\%\}$</Latex> = <span className="highlight red">€6000</span>
+
+### Step 2: Rate
+
+<Callout type="info">
+    Linear Rate = <Latex>$\frac\{1\}\{\text\{Useful Life\}\}$</Latex>
+</Callout>
+
+**Useful Life** = 5 years
+
+**Rate** = <Latex>$\frac\{1\}\{5\}$</Latex> = <span className="highlight red">0.2</span> = <span className="highlight red">20%</span>
+
+### Step 3: Amortization
+
+<Callout type="info">
+    Amortization = <Latex>$\text\{Price Excluding Taxes\} \times \text\{Rate\}$</Latex>
+</Callout>
+
+**Amortization** = <Latex>$€6000 \times 20\\% = \frac\{€6000\}\{5\}$</Latex> = <span className="highlight red">€1200</span>
+
+### Step 4: Used days
+
+<Callout type="info">
+    Used days = <Latex>$360 - \text\{Days from beginning of the year to purchase date\}$</Latex>
+</Callout>
+
+Since we bought the furniture on <span className="highlight">18 June</span>, we have to calculate the amortization for the first year.
+
+**Used days** = <Latex>$360 - (30 \times 6 + 18) =$</Latex> <span className="highlight red">192 days</span>
+
+### Step 5: Amortization for First Year
+
+<Callout type="info">
+    Amortization for First Year = <Latex>$\frac\{\text\{Amortization\}\}\{360\} \times \text\{Used days\}$</Latex>
+</Callout>
+
+**Amortization for First Year** = <Latex>$\frac\{€1200\}\{360\} \times 192 =$</Latex> <span className="highlight red">€640</span>
+
+### Step 6: Amortization Table
+
+<img
+  className="dark"
+  src="/accounting/exercice/amortization-1-dark.png"
+  alt="Amortization Table Image"
+/>
+<img
+  className="light"
+  src="/accounting/exercice/amortization-1-light.png"
+  alt="Amortization Table Image"
+/>
+
+### Step 7: Recording for 1st Year
+
+Account for Depreciation, Amortization and Provision = <span className="highlight green">68</span>
+
+Account for amortization of fixed assets = <span className="highlight green">28</span>
+
+<img
+  className="dark"
+  src="/accounting/exercice/amortization-recording-1-dark.png"
+  alt="Amortization Recording Image"
+/>
+<img
+  className="light"
+  src="/accounting/exercice/amortization-recording-1-light.png"
+  alt="Amortization Recording Image"
+/>
+
+</Steps>
+
+## Exercice 2
+
+<Callout type="info">
+**Invoice N°112 19/04/2023**
+
+**Industrial tools**: €35 000
+
+**VAT 20%** : €7 000
+
+**Net to be paid** : €42 000
+
+The equipment will be commissioned on 25 May. The depreciation period is 7 years (in degressive mode). 
+</Callout>
+
+<Steps>
+
+### Step 1: Price Before Tax
+
+The price before tax is already provided as it is €35 000. We can make sure by calculating it:
+
+<Callout type="info">
+    **Price Excluding Taxes** = <Latex>$\frac\{\text\{Price Including Taxes\}\}\{1+\text\{VAT Rate\}\}$</Latex>
+</Callout>
+
+**Price Excluding Taxes** = <Latex>$\frac\{€42 000\}\{1+20\\%\}$</Latex> = <span className="highlight red">€35 000</span>
+
+### Step 2: Rates
+
+<Callout type="info">
+    **Linear Rate** = <Latex>$\frac\{1\}\{\text\{Useful Life\}\}$</Latex>
+
+    **Degressive Annuity rate** = <Latex>$R_L \times \text\{Original Coefficient\} = \frac\{100\\%\}\{\text\{Duration of use\}\} \times \text\{Original Coefficient\}$</Latex>
+</Callout>
+
+<Callout type="error" emoji="‼️">
+| Duration                                                                      | Original Coefficient |
+| ------------------------------------------------------------------------- | -------------- | 
+| Between <span className="highlight">3</span> and  <span className="highlight">4</span> years | 1.25          | 
+| Between  <span className="highlight">5</span> and  <span className="highlight">6</span> years  | 1.75         |
+| More than  <span className="highlight">6</span> years  | 2.25         |
+
+</Callout>
+
+**Linear Rate** = <Latex>$\frac\{1\}\{7\}$</Latex> = <span className="highlight red">0.14</span> = <span className="highlight red">14%</span>
+
+**Degressive Annuity rate** = <Latex>$\frac\{100\\%\}\{7\} \times 2.25 =$</Latex> <span className="highlight red">32.14%</span>
+
+### Step 3: Used months
+
+<Callout type="info">
+    **Used months** = <Latex>$12 - \text\{Months from beginning of the year to commissioning date\}$</Latex>
+</Callout>
+
+Since we commissioned the equipment on <span className="highlight">25 May</span>, we have to calculate the amortization for the first year.
+
+**Used months** = <Latex>$12 - 4 =$</Latex> <span className="highlight red">8 months</span>
+
+### Step 4: Amortization for First Year
+
+<Callout type="info">
+    **Amortization for First Year** = <Latex>$\text\{Price Excluding Taxes\} \times \text\{Degressive Rate\} \times \frac\{\text\{Used months\}\}\{12\}$</Latex>
+</Callout>
+
+**Amortization for First Year** = <Latex>$€35 000 \times 32.14\\% \times \frac\{8\}\{12\} =$</Latex> <span className="highlight red">€7499,33</span>
+
+### Step 5: Amortization Table
+
+<Callout type="info">
+     
+</Callout>
+
+</Steps>
+
+
+
+
