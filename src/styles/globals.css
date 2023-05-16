@@ -64,6 +64,12 @@ html.dark img.dark {
     border-color: #333333;
     border-radius: 0.375rem;
     padding: 0.175rem;
+    background-color: #33333360;
+  }
+
+  html.light .highlight {
+    border-color: #333;
+    background-color: #33333310;
   }
   
   html.dark .blue {
