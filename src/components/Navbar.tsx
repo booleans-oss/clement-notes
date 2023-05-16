@@ -4,6 +4,7 @@ import * as Popover from "@radix-ui/react-popover";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import classNames from "classnames";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -123,12 +124,14 @@ export default function Navbar() {
             </div>
           </div>
 
-          <button
-            className="cursor-pointer items-center justify-center rounded-full bg-blue-900 px-4 py-2 text-sm text-white outline-none transition-colors duration-300 hover:bg-blue-500"
-            aria-label="Update dimensions"
-          >
-            Log in
-          </button>
+          <Link href="/welcome" passHref>
+            <button
+              className="cursor-pointer items-center justify-center rounded-full bg-blue-900 px-4 py-2 text-sm text-white outline-none transition-colors duration-300 hover:bg-blue-500"
+              aria-label="Update dimensions"
+            >
+              Lessons
+            </button>
+          </Link>
         </div>
       </div>
 
