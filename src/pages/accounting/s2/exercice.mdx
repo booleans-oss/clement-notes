@@ -197,9 +197,203 @@ Account for amortization of fixed assets = <span className="highlight green">28<
   alt="Amortization Recording Image"
 />
 
+</Steps>
+
+## Exercice 3
+
+<Callout type="info">
+- Garel: amount of the receivable <span className="highlight">8,820 €</span> including tax (VAT 20%). We expect to recover
+<span className="highlight">70%</span> of the debt.
+
+- Pépin: amount of the receivable <span className="highlight">6,024 €</span> including tax (VAT 20%). Evaluation of the
+probable loss: <span className="highlight">40%</span>.
+</Callout>
+
+<Steps>
+
+### Step 1: Amount of the Receivable
+
+<Callout type="info">
+    **Amount of the Receivable** = <Latex>$\frac\{\text\{Amount of the Receivable Including Taxes\}\}\{1+\text\{VAT Rate\}\}$</Latex>
+</Callout>
+
+**Amount of the Receivable for Garel** = <Latex>$\frac\{€8 820\}\{1+20\\%\}$</Latex> = <span className="highlight red">€7 350</span>
+
+**Amount of the Receivable for Pepin** = <Latex>$\frac\{€6 024\}\{1+20\\%\}$</Latex> = <span className="highlight red">€5 020</span>
+
+### Step 2: Provision
+
+<Callout type="info">
+    **Provision** = <Latex>$\text\{Amount of the Receivable\} \times \text\{Percentage of the possible loss\}$</Latex>
+</Callout>
+
+For Garel, the provision is the opposite of what we can recover, thus: <span className="highlight">30%</span>. (100% - 70%)
+
+**Provision for Garel** = <Latex>$€7 350 \times 30\\% =$</Latex> <span className="highlight red">€2 205</span>
+
+For Pepin, the provision is the percentage of the possible loss, thus: <span className="highlight">40%</span>.
+
+**Provision for Pepin** = <Latex>$€5 020 \times 40\\% =$</Latex> <span className="highlight red">€2 008</span>
+
+### Step 3: Recording
+
+Account for Depreciation, Amortization and Provision = <span className="highlight green">68</span>
+
+Account for provision for receivables = <span className="highlight green">49</span>
+
+<img
+  className="dark"
+  src="/accounting/exercice/provision-recording-dark.png"
+  alt="Provision Recording Image"
+/>
+
+<img
+  className="light"
+  src="/accounting/exercice/provision-recording-light.png"
+  alt="Provision Recording Image"
+/>
 
 </Steps>
 
+## Exercice 4
 
+<Callout type="info">
+| Customer | Amount incl. VAT | Amount excl. VAT | Existing Provision (%) | Payment in N | Observation     |
+| -------- | ---------------- | ---------------- | ---------------------- | ------------ | --------------- |
+| A        | 10080 €          | 8400 €           | 30%                    | 5382 €       | Last payment    |
+| B        | 3120 €           | 2600 €           | 15%                    | 598 €       | Increase to 30% |
+| C        | 6420 €           | 5350 €           | 25%                    | 3100 €       | Last payment    |
+| D        | 4440 €           | 3700 €           | 40%                    | 4440 €       | -               |
+| E        | 9000 €           | 7500 €           | 35%                    | 4100 €       | Reduce to 20%   |
+</Callout>
 
+<img
+  className="dark"
+  src="/accounting/exercice/provision-empty-dark.png"
+  alt="Provision Empty Image"
+/>
+
+<img
+  className="light"
+  src="/accounting/exercice/provision-empty-light.png"
+  alt="Provision Empty Image"
+/>
+
+### Customer A
+
+#### Step 1: Amount After Payment
+
+<Callout type="info">
+    **Amount After Payment** = <Latex>$\text\{Amount of the Receivable Including Taxes\} - \text\{Payment\}$</Latex>
+</Callout>
+
+**Amount After Payment for Customer A** = <Latex>$€10 080 - €5 382 =$</Latex> <span className="highlight red">€4 698</span>
+
+#### Step 2: Amount excluding VAT
+
+<Callout type="info">
+    **Amount excluding VAT** = <Latex>$\frac\{\text\{Amount After Payment\}\}\{1+\text\{VAT Rate\}\}$</Latex>
+</Callout>
+
+**Amount excluding VAT for Customer A** = <Latex>$\frac\{€4 698\}\{1+20\\%\} =$</Latex> <span className="highlight red">€3 915</span>
+
+#### Step 3: Existing Provision
+
+<Callout type="info">
+    **Existing Provision** = <Latex>$\text\{Amount excluding VAT\} \times \text\{Percentage of the existing provision\}$</Latex>
+</Callout>
+
+**Existing Provision for Customer A** = <Latex>$€8400 \times 30\\% =$</Latex> <span className="highlight red">€2 520</span>
+
+#### Step 4: Loss
+
+Since it is the last payment, the loss is the remaining amount after payment (excl. taxes) that the customer will never pay back.
+
+**Loss** = <span className="highlight red">€3 915</span>
+
+#### Step 5: Loss VAT
+
+<Callout type="info">
+    **Loss VAT** = <Latex>$\text\{Loss\} \times \text\{VAT Rate\}$</Latex>
+</Callout>
+
+**Loss VAT for Customer A** = <Latex>$€3 915 \times 20\\% =$</Latex> <span className="highlight red">€783</span>
+
+#### Step 6: Provision Needed
+
+Since we declared a loss, the provision needed is now <span className="highlight red">0</span>.
+
+#### Step 7: Depreciation or Reversal
+
+The existing provision is <span className="highlight red">€2 520</span> and the provision needed is <span className="highlight red">0</span>. Thus, we need to reverse the provision (needed < existing).
+
+#### Step 8: Table
+
+<img
+  className="dark"
+  src="/accounting/exercice/provision-1-dark.png"
+  alt="Provision 1 Image"
+/>
+
+<img
+  className="light"
+  src="/accounting/exercice/provision-1-light.png"
+  alt="Provision 1 Image"
+/>
+
+### Customer B
+
+#### Step 1: Amount After Payment
+
+<Callout type="info">
+    **Amount After Payment** = <Latex>$\text\{Amount of the Receivable Including Taxes\} - \text\{Payment\}$</Latex>
+</Callout>
+
+**Amount After Payment for Customer B** = <Latex>$€3 120 - €598 =$</Latex> <span className="highlight red">€2 522</span>
+
+#### Step 2: Amount excluding VAT
+
+<Callout type="info">
+    **Amount excluding VAT** = <Latex>$\frac\{\text\{Amount After Payment\}\}\{1+\text\{VAT Rate\}\}$</Latex>
+</Callout>
+
+**Amount excluding VAT for Customer B** = <Latex>$\frac\{€2 522\}\{1+20\\%\} =$</Latex> <span className="highlight red">€2 101,67</span>
+
+#### Step 3: Existing Provision
+
+<Callout type="info">
+    **Existing Provision** = <Latex>$\text\{Amount excluding VAT\} \times \text\{Percentage of the existing provision\}$</Latex>
+</Callout>
+
+**Existing Provision for Customer B** = <Latex>$€2 600 \times 15\\% =$</Latex> <span className="highlight red">€390</span>
+
+#### Step 4: Loss
+
+Since it is not the last payment, there is no loss.
+
+#### Step 5: Provision Needed
+
+<Callout type="info">
+    **Provision Needed** = <Latex>$\text\{Amount excluding VAT\} \times \text\{Percentage of the updated provision\}$</Latex>
+</Callout>
+
+**Provision Needed for Customer B** = <Latex>$€2 101,67 \times 30\\% =$</Latex> <span className="highlight red">€630,50</span>
+
+#### Step 6: Depreciation or Reversal
+
+The existing provision is <span className="highlight red">€390</span> and the provision needed is <span className="highlight red">€630,50</span>. Thus, we need to depreciate the provision (needed > existing).
+
+#### Step 7: Table
+
+<img
+  className="dark"
+  src="/accounting/exercice/provision-2-dark.png"
+  alt="Provision 2 Image"
+/>
+
+<img
+  className="light"
+  src="/accounting/exercice/provision-2-light.png"
+  alt="Provision 2 Image"
+/>
 
