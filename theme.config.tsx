@@ -74,7 +74,7 @@ const config: DocsThemeConfig = {
       </>
     );
   },
-  docsRepositoryBase: "https://github.com/booleans-oss/new-notes",
+  docsRepositoryBase: "https://github.com/booleans-oss/clement-notes",
   footer: {
     text: "Made by 🚀 Clement",
   },
