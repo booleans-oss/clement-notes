@@ -76,7 +76,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: "https://github.com/booleans-oss/new-notes",
   footer: {
-    text: "These are my notes.",
+    text: "Made by 🚀 Clement",
   },
   feedback: {
     content: "",
