@@ -188,7 +188,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="flex h-screen w-full flex-col items-center justify-center gap-10 overflow-hidden bg-transparent">
+      <div className="flex h-full sm:h-screen w-full flex-col items-center justify-center gap-10 overflow-hidden bg-transparent py-10 sm:py-0">
         <div className="flex flex-col items-center gap-10">
           <h3 className="text-md w-fit rounded-full bg-zinc-700 px-4 py-1 font-normal text-zinc-400">
             01. Choose
@@ -210,20 +210,20 @@ const HeroSection = () => {
               aria-label="Manage your account"
             >
               <Tabs.Trigger
-                className="flex h-[45px] flex-1 cursor-pointer items-center justify-center whitespace-nowrap border-b border-transparent px-5 text-[15px] leading-none text-gray-200 focus:border-white data-[state=active]:border-white"
+                className="flex h-[100px] sm:h-[45px] flex-1 cursor-pointer items-center justify-center whitespace-wrap sm:whitespace-nowrap border-b border-transparent px-5 text-[15px] leading-none text-gray-200 focus:border-white data-[state=active]:border-white"
                 value="tab1"
               >
                 International Business Competencies & Methods
               </Tabs.Trigger>
               <Tabs.Trigger
-                className="flex h-[45px] flex-1 cursor-pointer items-center justify-center border-b border-transparent px-5 text-[15px] leading-none text-gray-200 focus:border-white data-[state=active]:border-white"
+                className="flex h-[100px] sm:h-[45px] flex-1 cursor-pointer items-center justify-center border-b border-transparent px-5 text-[15px] leading-none text-gray-200 focus:border-white data-[state=active]:border-white"
                 value="tab2"
               >
                 International Management and Personal Skills
               </Tabs.Trigger>
             </Tabs.List>
             <Tabs.Content
-              className="grid grow grid-cols-3 gap-4 rounded-b-md p-5 text-gray-200 outline-none"
+              className="grid grow grid-cols-1 sm:grid-cols-3 gap-4 rounded-b-md p-5 text-gray-200 outline-none"
               value="tab1"
             >
               <div className="flex max-w-sm flex-col items-start gap-4 rounded-lg bg-gray-700/20 px-8 py-8 text-gray-400 backdrop-blur-md">
@@ -288,7 +288,7 @@ const HeroSection = () => {
               </div>
             </Tabs.Content>
             <Tabs.Content
-              className="grid grow grid-cols-3 gap-4 rounded-b-md p-5 text-gray-200 outline-none"
+              className="grid grow grid-cols-1 sm:grid-cols-3 gap-4 rounded-b-md p-5 text-gray-200 outline-none"
               value="tab2"
             >
               <div className="flex max-w-sm flex-col items-start gap-4 rounded-lg bg-gray-700/20 px-8 py-8 text-gray-400 backdrop-blur-md">
