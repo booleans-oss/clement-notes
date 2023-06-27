@@ -4,17 +4,16 @@ import { Analytics } from "@vercel/analytics/react";
 import { api } from "@/utils/api";
 
 import "@/styles/globals.css";
-import 'katex/dist/katex.min.css'
-// import { ClerkProvider } from "@clerk/nextjs";
+import "@/styles/calendar.css";
+import "katex/dist/katex.min.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <>
-    {/* <ClerkProvider> */ }
+    <ClerkProvider>
       <Component {...pageProps} />
       <Analytics />
-    {/* </ClerkProvider> */}
-    </>
+    </ClerkProvider>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Inter, Montserrat } from 'next/font/google';
+import { Inter, Lexend } from 'next/font/google';
 
 export const body = Inter({
     weight: ['300', '400', '500', '600', '700'],
@@ -6,7 +6,7 @@ export const body = Inter({
     subsets: ['latin'],
 })
 
-export const heading = Montserrat({
+export const heading = Lexend({
     weight: ['400', '500', '600', '700', '800', '900'],
     display: 'swap',
     subsets: ['latin'],

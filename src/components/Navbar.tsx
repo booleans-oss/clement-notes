@@ -5,9 +5,14 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import classNames from "classnames";
 import Link from "next/link";
+import { useAuth } from "@clerk/nextjs";
 
 export default function Navbar() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const { isSignedIn } = useAuth();
+
+  const continueButtonHref = isSignedIn ? "/api/checkout" : "/welcome";
 
   return (
     <nav className="bg-sky-50">
@@ -29,13 +34,13 @@ export default function Navbar() {
                 )}
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                 />
               </svg>
@@ -46,13 +51,13 @@ export default function Navbar() {
                 )}
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
@@ -124,12 +129,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="/welcome" passHref>
+          <Link href={continueButtonHref} passHref>
             <button
               className="cursor-pointer items-center justify-center rounded-full bg-blue-900 px-4 py-2 text-sm text-white outline-none transition-colors duration-300 hover:bg-blue-500"
               aria-label="Update dimensions"
             >
-              Lessons
+             {isSignedIn ? "Subscribe" : "Sign In"} 
             </button>
           </Link>
         </div>

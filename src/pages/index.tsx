@@ -182,13 +182,13 @@ const HeroSection = () => {
           <Image
             src={DesktopImage}
             className="rounded-xl border border-gray-200 shadow-xl"
-            width={1000}
-            height={600}
+            width={1541 * 0.75}
+            height={1399 * 0.75}
             alt="Desktop App Image"
           />
         </div>
       </div>
-      <div className="flex h-full sm:h-screen w-full flex-col items-center justify-center gap-10 overflow-hidden bg-transparent py-10 sm:py-0">
+      <div className="flex h-full w-full flex-col items-center justify-center gap-10 overflow-hidden py-10 sm:h-screen sm:py-0">
         <div className="flex flex-col items-center gap-10">
           <h3 className="text-md w-fit rounded-full bg-zinc-700 px-4 py-1 font-normal text-zinc-400">
             01. Choose
@@ -210,20 +210,20 @@ const HeroSection = () => {
               aria-label="Manage your account"
             >
               <Tabs.Trigger
-                className="flex h-[100px] sm:h-[45px] flex-1 cursor-pointer items-center justify-center whitespace-wrap sm:whitespace-nowrap border-b border-transparent px-5 text-[15px] leading-none text-gray-200 focus:border-white data-[state=active]:border-white"
+                className="whitespace-wrap flex h-[100px] flex-1 cursor-pointer items-center justify-center border-b border-transparent px-5 text-[15px] leading-none text-gray-200 focus:border-white data-[state=active]:border-white sm:h-[45px] sm:whitespace-nowrap"
                 value="tab1"
               >
                 International Business Competencies & Methods
               </Tabs.Trigger>
               <Tabs.Trigger
-                className="flex h-[100px] sm:h-[45px] flex-1 cursor-pointer items-center justify-center border-b border-transparent px-5 text-[15px] leading-none text-gray-200 focus:border-white data-[state=active]:border-white"
+                className="flex h-[100px] flex-1 cursor-pointer items-center justify-center border-b border-transparent px-5 text-[15px] leading-none text-gray-200 focus:border-white data-[state=active]:border-white sm:h-[45px]"
                 value="tab2"
               >
                 International Management and Personal Skills
               </Tabs.Trigger>
             </Tabs.List>
             <Tabs.Content
-              className="grid grow grid-cols-1 sm:grid-cols-3 gap-4 rounded-b-md p-5 text-gray-200 outline-none"
+              className="grid grow grid-cols-1 gap-4 rounded-b-md p-5 text-gray-200 outline-none sm:grid-cols-3"
               value="tab1"
             >
               <div className="flex max-w-sm flex-col items-start gap-4 rounded-lg bg-gray-700/20 px-8 py-8 text-gray-400 backdrop-blur-md">
@@ -288,7 +288,7 @@ const HeroSection = () => {
               </div>
             </Tabs.Content>
             <Tabs.Content
-              className="grid grow grid-cols-1 sm:grid-cols-3 gap-4 rounded-b-md p-5 text-gray-200 outline-none"
+              className="grid grow grid-cols-1 gap-4 rounded-b-md p-5 text-gray-200 outline-none sm:grid-cols-3"
               value="tab2"
             >
               <div className="flex max-w-sm flex-col items-start gap-4 rounded-lg bg-gray-700/20 px-8 py-8 text-gray-400 backdrop-blur-md">
@@ -308,9 +308,9 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <div className="flex h-screen w-full flex-col items-center justify-center gap-10 bg-sky-50">
+      <div className="flex h-full w-full sm:h-screen flex-col items-center justify-center gap-40 bg-sky-50 py-10 sm:py-0">
         <div className="flex flex-col items-center gap-10">
-          <h3 className="text-md w-fit rounded-full bg-gray-200 px-4 py-1 font-normal text-zinc-400">
+          <h3 className="text-md w-fit rounded-full bg-gray-200 px-4 py-1 font-normal text-zinc-800">
             02. Find
           </h3>
           <h1 className="whitespace-pre text-center text-xl font-medium text-black sm:text-5xl">
@@ -328,14 +328,14 @@ const HeroSection = () => {
             height={1084 / 2}
             alt="Folders Image"
           />
-          <button className="rounded-full border border-black px-6 py-3 font-medium text-black transition-colors hover:bg-black hover:text-white">
+          <button className="rounded-full border border-white px-6 py-3 font-medium transition-all bg-white text-black hover:shadow-lg">
             Explore all lessons
           </button>
         </div>
       </div>
-      <div className="flex h-screen w-full flex-col items-center justify-center gap-10 bg-transparent">
+      <div className="flex h-full sm:h-screen w-full flex-col items-center justify-center gap-40 py-10 sm:py-0 bg-[#161a22]">
         <div className="flex flex-col items-center gap-10">
-          <h3 className="text-md w-fit rounded-full bg-zinc-700 px-4 py-1 font-normal text-zinc-400">
+          <h3 className="text-md w-fit rounded-full bg-gray-700 px-4 py-1 font-normal text-zinc-100">
             03. Learn
           </h3>
           <h1
@@ -350,9 +350,9 @@ const HeroSection = () => {
             <span style={{ textShadow: "16px -11px 60px #e54cad" }}>
               examples
             </span>
-            {"\n"} <span className="text-gray-400">as you wish</span>
+            {"\n"} <span className="text-gray-300">as you wish</span>
           </h1>
-          <button className="rounded-full border  px-6 py-3 font-medium text-white transition-colors hover:bg-white hover:text-black">
+          <button className="rounded-full border  bg-white px-6 py-3 font-medium text-black transition-colors hover:bg-black hover:text-white">
             See materials
           </button>
         </div>
@@ -500,9 +500,10 @@ const HeroSection = () => {
               <h2 className="text-2xl font-semibold text-white">Accurate</h2>
               <p>
                 You often miss important information in your notes. My notes are
-                accurate and complete. It only contains the essential and accurate information that you
-                need. You will never miss any information again. You will have
-                all the important information you need to get a 20/20 in your next test.
+                accurate and complete. It only contains the essential and
+                accurate information that you need. You will never miss any
+                information again. You will have all the important information
+                you need to get a 20/20 in your next test.
               </p>
             </div>
           </div>

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap');
+
+.fc-button-group button {
+    @apply bg-blue-900 border-none hover:bg-blue-900/90 !important;
+}
+
+.fc-toolbar {
+    flex-direction: row;
+    padding: 0 4rem;
+}
+
+.fc-toolbar-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Lexend", sans-serif;
+}
+
+.fc-day-today {
+    background-color: #e6e6e6 !important;
+}
+
+.fc-event-main {
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .fc-toolbar {
+        padding: 0 1rem;
+        flex-direction: column-reverse;
+        width: 100vw;
+    }
+
+    .fc-toolbar-chunk:last-child {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
