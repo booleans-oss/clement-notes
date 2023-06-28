@@ -10,9 +10,9 @@ import { useAuth } from "@clerk/nextjs";
 export default function Navbar() {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  const { isSignedIn } = useAuth();
+  // const { isSignedIn } = useAuth();
 
-  const continueButtonHref = isSignedIn ? "/api/checkout" : "/welcome";
+  // const continueButtonHref = isSignedIn ? "/api/checkout" : "/welcome";
 
   return (
     <nav className="bg-sky-50">
@@ -129,14 +129,14 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href={continueButtonHref} passHref>
+          {/* <Link href={continueButtonHref} passHref>
             <button
               className="cursor-pointer items-center justify-center rounded-full bg-blue-900 px-4 py-2 text-sm text-white outline-none transition-colors duration-300 hover:bg-blue-500"
               aria-label="Update dimensions"
             >
              {isSignedIn ? "Subscribe" : "Sign In"} 
             </button>
-          </Link>
+          </Link> */}
         </div>
       </div>
 
